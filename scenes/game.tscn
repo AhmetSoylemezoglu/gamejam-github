@@ -17,10 +17,17 @@
 [ext_resource type="Texture2D" uid="uid://psc0yxyw8lt7" path="res://assets/symbols of ccokies/symbol_moon.png" id="14_bt5mj"]
 [ext_resource type="Texture2D" uid="uid://cg4e1v5wvtboj" path="res://assets/symbols of ccokies/symbol_thunder.png" id="15_e1j6l"]
 [ext_resource type="PackedScene" uid="uid://b3cphoajcqir1" path="res://scenes/timer.tscn" id="17_rysoc"]
-[ext_resource type="Shader" uid="uid://c5p0we24o2cl1" path="res://screen_effects/screenEffect.gdshader" id="18_ssvqc"]
+[ext_resource type="Shader" uid="uid://bk51srf0xbnlb" path="res://screen_effects/denemeShader.gdshader" id="18_ssvqc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_264po"]
 shader = ExtResource("18_ssvqc")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 0.5
+shader_parameter/warp_amount = 0.05
+shader_parameter/vignette_amount = 0.5
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/grille_amount = 0.05
+shader_parameter/brightness_boost = 1.2
 
 [sub_resource type="QuadMesh" id="QuadMesh_rysoc"]
 size = Vector2(1280, 720)

@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://c4oso5et5o36q" path="res://sfx/Oppressive Gloom.mp3" id="5_vhuq6"]
 [ext_resource type="AudioStream" uid="uid://cjddc7ckfa4xc" path="res://sfx/clicking_sound.wav" id="6_y6r1n"]
 [ext_resource type="PackedScene" uid="uid://hnewpyu7723f" path="res://scenes/Fade_anim.tscn" id="7_35vn0"]
-[ext_resource type="Shader" uid="uid://c5p0we24o2cl1" path="res://screen_effects/screenEffect.gdshader" id="8_oqyu1"]
+[ext_resource type="Shader" uid="uid://bk51srf0xbnlb" path="res://screen_effects/denemeShader.gdshader" id="8_oqyu1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6cm7"]
 bg_color = Color(0.741176, 0.0627451, 0.317647, 1)
@@ -43,6 +43,13 @@ shadow_offset = Vector2(0, 5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bea5q"]
 shader = ExtResource("8_oqyu1")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 0.5
+shader_parameter/warp_amount = 0.05
+shader_parameter/vignette_amount = 0.5
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/grille_amount = 0.05
+shader_parameter/brightness_boost = 1.2
 
 [sub_resource type="QuadMesh" id="QuadMesh_5cgra"]
 size = Vector2(1280, 720)
