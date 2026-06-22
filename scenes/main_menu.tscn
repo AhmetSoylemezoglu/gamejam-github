@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c80ef3vqgxqqu"]
+[gd_scene format=3 uid="uid://c80ef3vqgxqqu"]
 
 [ext_resource type="Script" uid="uid://lcie51d5et3t" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="FontFile" uid="uid://kxshfrilu1ou" path="res://fonts/PixelOperator8.ttf" id="1_ekxnf"]
@@ -7,14 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://bagy2d7yjtvmv" path="res://scenes/floating_symbols.tscn" id="4_wu84c"]
 [ext_resource type="AudioStream" uid="uid://c4oso5et5o36q" path="res://sfx/Oppressive Gloom.mp3" id="5_8ln24"]
 [ext_resource type="AudioStream" uid="uid://cjddc7ckfa4xc" path="res://sfx/clicking_sound.wav" id="6_oa1go"]
+[ext_resource type="Shader" uid="uid://c5p0we24o2cl1" path="res://screen_effects/screenEffect.gdshader" id="8_tbmy8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6cm7"]
 bg_color = Color(0.203922, 0.384314, 0.247059, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekxnf"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
-bg_color = Color(0.779291, 0.779291, 0.779291, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
+bg_color = Color(0.963782, 0.866012, 0.611656, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -31,8 +30,8 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 5)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
-bg_color = Color(0.963782, 0.866012, 0.611656, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
+bg_color = Color(0.779291, 0.779291, 0.779291, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -40,7 +39,16 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 5)
 
-[node name="MainMenu" type="Control"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekxnf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jk1qb"]
+shader = ExtResource("8_tbmy8")
+
+[sub_resource type="QuadMesh" id="QuadMesh_oa1go"]
+size = Vector2(1280, 720)
+center_offset = Vector3(640, 360, 0)
+
+[node name="MainMenu" type="Control" unique_id=458838336]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -53,7 +61,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_bqqt6")
 
-[node name="background_color" type="Panel" parent="."]
+[node name="background_color" type="Panel" parent="." unique_id=982334169]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -68,57 +76,57 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_l6cm7")
 
-[node name="floating_symbols_list" type="Node2D" parent="."]
+[node name="floating_symbols_list" type="Node2D" parent="." unique_id=846376147]
 
-[node name="floating_symbols" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols" parent="floating_symbols_list" unique_id=158193756 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols2" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols2" parent="floating_symbols_list" unique_id=1967809182 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols3" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols3" parent="floating_symbols_list" unique_id=2048196217 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols4" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols4" parent="floating_symbols_list" unique_id=1105635740 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols5" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols5" parent="floating_symbols_list" unique_id=1439842106 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols6" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols6" parent="floating_symbols_list" unique_id=339982544 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols7" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols7" parent="floating_symbols_list" unique_id=2143989443 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols8" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols8" parent="floating_symbols_list" unique_id=427578953 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols9" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols9" parent="floating_symbols_list" unique_id=2018146829 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols10" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols10" parent="floating_symbols_list" unique_id=589483539 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols11" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols11" parent="floating_symbols_list" unique_id=566846102 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols12" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols12" parent="floating_symbols_list" unique_id=1036383089 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols13" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols13" parent="floating_symbols_list" unique_id=537865330 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols14" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols14" parent="floating_symbols_list" unique_id=1111217536 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols15" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols15" parent="floating_symbols_list" unique_id=1814692827 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="floating_symbols16" parent="floating_symbols_list" instance=ExtResource("4_wu84c")]
+[node name="floating_symbols16" parent="floating_symbols_list" unique_id=651368294 instance=ExtResource("4_wu84c")]
 position = Vector2(-421, -115)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2006268162]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -134,53 +142,53 @@ grow_vertical = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="start" type="Button" parent="VBoxContainer"]
+[node name="start" type="Button" parent="VBoxContainer" unique_id=1281967149]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_ekxnf")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
 text = "START GAME	"
 
-[node name="options" type="Button" parent="VBoxContainer"]
+[node name="options" type="Button" parent="VBoxContainer" unique_id=257941905]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_ekxnf")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
 text = "OPTIONS"
 
-[node name="exit" type="Button" parent="VBoxContainer"]
+[node name="exit" type="Button" parent="VBoxContainer" unique_id=515257765]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_ekxnf")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
 text = "EXIT"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=313317789]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -201,16 +209,16 @@ theme_override_font_sizes/font_size = 48
 text = "BISC UIT  OR  GO  HOME"
 horizontal_alignment = 1
 
-[node name="main_menu_music" type="AudioStreamPlayer2D" parent="."]
+[node name="main_menu_music" type="AudioStreamPlayer2D" parent="." unique_id=1758339468]
 stream = ExtResource("5_8ln24")
 volume_db = -15.0
 autoplay = true
 parameters/looping = true
 
-[node name="Button_click" type="AudioStreamPlayer2D" parent="."]
+[node name="Button_click" type="AudioStreamPlayer2D" parent="." unique_id=558874237]
 stream = ExtResource("6_oa1go")
 
-[node name="Fade_transition" parent="." instance=ExtResource("2_rtw2f")]
+[node name="Fade_transition" parent="." unique_id=1643575322 instance=ExtResource("2_rtw2f")]
 visible = false
 layout_mode = 0
 anchors_preset = 0
@@ -225,7 +233,13 @@ offset_bottom = 406.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Fade_timer" type="Timer" parent="Fade_transition"]
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=430023283]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=671234850]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer" unique_id=966743942]
+material = SubResource("ShaderMaterial_jk1qb")
+mesh = SubResource("QuadMesh_oa1go")
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
